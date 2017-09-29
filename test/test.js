@@ -61,7 +61,7 @@ describe("Getty api call", function() {
             done(); 
         });
     }); 
-    //new
+    //new part 3
         it("should return length?!?!", function(done) {
          getty.makeApiRequest(function(error, imgURI) {
             //console.log("tweets: " + tweets.length); 
