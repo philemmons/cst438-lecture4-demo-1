@@ -62,6 +62,6 @@ describe("Getty api call", function() {
         });
     }); 
     
-    
+    //wtf
     
 }); 
