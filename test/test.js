@@ -46,12 +46,12 @@ describe("Twitter api call", function() {
 }); 
 
 var stub = sinon.stub(getty, "makeApiRequest").callsFake(function(callback) {
-         callback(null, "http://gettyimages.com/bird.png"); 
+         callback(null, "http://gettyimages.com/ducky.png"); 
     });
     
 describe("Getty api call", function() {
     
-    it("should return without errors", function(done) {
+    it("should return without errors, maybe", function(done) {
         
         getty.makeApiRequest(function(error, imgURI) {
             //console.log("tweets: " + tweets.length); 
@@ -61,7 +61,16 @@ describe("Getty api call", function() {
             done(); 
         });
     }); 
-    
+    //new
+        it("should return length?!?!", function(done) {
+         getty.makeApiRequest(function(error, imgURI) {
+            //console.log("tweets: " + tweets.length); 
+            expect(imgURI).to.be.a('array');
+            
+            expect(imgURI.length).to.be.above(0); 
+            done(); 
+        });
+    });
     //wtf
     
 }); 
